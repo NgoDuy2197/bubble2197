@@ -1,0 +1,171 @@
+/*
+	Falling Leaves with CSS Only
+	http://premiumcoding.com/css3-tricks-falling-leaves-css/
+*/
+
+body {}
+
+.tomove {
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* -webkit-app-region: drag; */
+    z-index: 9999;
+}
+
+.tomove:hover {
+    background-color: rgba(0, 234, 255, 0.102) !important;
+}
+
+.leaves {
+    transition: 1.5s;
+}
+
+.loader .leaves:hover {
+    cursor: pointer;
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.leaves:active {
+    transition: 0s !important;
+    background: url("Image/Boom.png") no-repeat !important;
+}
+
+.leaves:focus {
+    transition: 0s !important;
+    background: url("Image/Boom.png") no-repeat !important;
+}
+
+.container {
+    top: 0px;
+    /* background:#fff; */
+    background-size: cover !important;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    background: #1E1E20 url("Image/Earth.png") center top no-repeat;
+    overflow: hidden;
+}
+
+.loader {
+    text-align: center;
+}
+
+.leaves1 {
+    background: url("./Image/ZombieRocket.png") no-repeat !important;
+}
+
+.leaves2 {
+    background: url("./Image/ZombieBaloon.png") no-repeat !important;
+}
+
+.noimk {
+    background: url("./Image/Noi.png") no-repeat !important;
+}
+
+.kien {
+    background: url("./Image/Kien.png") no-repeat !important;
+}
+
+.phuong {
+    background: url("./Image/Phuong.png") no-repeat !important;
+}
+
+.loader .leaves {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: -280px 40px 54px -34px;
+    background-size: contain !important;
+    background: #ff0000;
+    /* background:url("http://premiumcoding.com/CSSTricks/fallingLeaves/leaf.png"); */
+    -webkit-animation: loader 8s infinite reverse cubic-bezier(0.23, 0.5, 0.320, 0.5);
+    -moz-animation: loader 8s infinite reverse cubic-bezier(0.23, 0.5, 0.320, 0.5);
+}
+
+.loader .leaves:nth-child(5n+5) {
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+
+.loader .leaves:nth-child(3n+2) {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+
+.loader .leaves:nth-child(2n+5) {
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.loader .leaves:nth-child(3n+10) {
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+
+.loader .leaves:nth-child(7n+2) {
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+
+.loader .leaves:nth-child(4n+5) {
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+}
+
+.loader .leaves:nth-child(3n+7) {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+}
+
+@-webkit-keyframes loader {
+    0% {
+        width: 80px;
+        height: 80px;
+        opacity: 1;
+        -webkit-transform: translate(0, 0px) rotateZ(0deg);
+    }
+    50% {
+        width: 80px;
+        height: 80px;
+        opacity: 1;
+        -webkit-transform: translate(100px, 600px) rotateZ(150deg);
+    }
+    75% {
+        width: 80px;
+        height: 80px;
+        opacity: 0.9;
+        -webkit-transform: translate(100px, 600px) rotateZ(240deg);
+    }
+    100% {
+        width: 80px;
+        height: 80px;
+        opacity: 0.5;
+        -webkit-transform: translate(40px, 800px) rotateZ(360deg);
+    }
+}
+
+@-moz-keyframes loader {
+    0% {
+        width: 80px;
+        height: 80px;
+        opacity: 1;
+        -moz-transform: translate(0, 0px) rotateZ(0deg);
+    }
+    75% {
+        width: 80px;
+        height: 80px;
+        opacity: 0.9;
+        -moz-transform: translate(100px, 600px) rotateZ(270deg);
+    }
+    100% {
+        width: 80px;
+        height: 80px;
+        opacity: 0.5;
+        -moz-transform: translate(40px, 800px) rotateZ(360deg);
+    }
+}
